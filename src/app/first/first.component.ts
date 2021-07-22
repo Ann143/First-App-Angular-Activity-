@@ -6,8 +6,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-  @Input() firstMessage = "";
+  // @Input() firstMessage = "";
 
+//This is for actvity number 3:
   @Output() firstEvent = new EventEmitter;
 
   constructor() { }
@@ -15,7 +16,7 @@ export class FirstComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+//This is for activity number 3:
   clickEvent() {
     this.firstEvent.emit('new message');
   }

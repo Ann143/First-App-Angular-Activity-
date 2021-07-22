@@ -12,6 +12,7 @@ export class AppComponent {
   
   title = 'This is my first Angular Project!';
 
+  //This is for activity number 5:
   devices : Device []= [
     {
       name: "Device01",
@@ -37,9 +38,7 @@ export class AppComponent {
   ]
 
 
-
-
-
+//This is for activity number 4:
   // number=0;
 
   // addEvent() {
@@ -50,20 +49,17 @@ export class AppComponent {
   //   this.appEvent.emit(this.number--);
   // }
 
-  // device: Device = {
-  //   name: "Device01",
-  //   brand: "Dell",
-  //   model: "Latitude 201"
-  // }
 
 
+//This is for activity number 3:
   // appMessage = '';
-
 
   // appEvent(event:any){
   //   this.appMessage = event;
   // }
 
+
+//This is for the Sir Junrey Demo:
   // appMessageArray = ['hi', 'hello', 'goodbye', 'go'];
 
   // showComponent = true;
