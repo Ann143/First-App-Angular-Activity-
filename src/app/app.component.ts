@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Device } from './models';
 
 @Component({
@@ -7,45 +7,71 @@ import { Device } from './models';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'This is my first Angular project';
 
-  device: Device = {
-    name: "Device01",
-    brand: "Dell",
-    model: "Latitude 201"
-  }
+  @Output() appEvent= new EventEmitter();
+  
+  title = 'This is my first Angular Project!';
 
   devices : Device []= [
     {
       name: "Device01",
       brand: "Dell",
-      model: "Latitude 201"
+      model: "ITZ400",
+      year:   2021,
+      serial: "123456try"
     },
     {
-      name: "Device01",
-      brand: "Dell",
-      model: "Latitude 201"
+      name: "Device02",
+      brand: "NEC",
+      model: "VersaPro",
+      year: 2019,
+      serial: "23456dsf"
+    },
+    {
+      name: "Device03",
+      brand: "Acer",
+      model: "Latitude",
+      year: 2018,
+      serial: "23456dsds"
     }
   ]
 
-  
 
 
 
-  appMessage = '';
+
+  // number=0;
+
+  // addEvent() {
+  //   this.appEvent.emit(this.number++);
+  // }
+
+  // subEvent() {
+  //   this.appEvent.emit(this.number--);
+  // }
+
+  // device: Device = {
+  //   name: "Device01",
+  //   brand: "Dell",
+  //   model: "Latitude 201"
+  // }
 
 
-  appEvent(event:any){
-    this.appMessage = event;
-  }
+  // appMessage = '';
 
-  appMessageArray = ['hi', 'hello', 'goodbye', 'go'];
 
-  showComponent = true;
+  // appEvent(event:any){
+  //   this.appMessage = event;
+  // }
 
-  showHide() {
-    this.showComponent = !this.showComponent;
-  }
+  // appMessageArray = ['hi', 'hello', 'goodbye', 'go'];
 
-  appNumberArray=['1', '2', '3', '4', '5'];
+  // showComponent = true;
+
+  // showHide() {
+  //   this.showComponent = !this.showComponent;
+  // }
+
+ 
+
 }

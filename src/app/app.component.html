@@ -1,16 +1,21 @@
-<!-- <p>{{ title }}</p> -->
-<p>Device details</p>
-<!-- <app-device-details [deviceDetail]="device"></app-device-details> -->
+
+<p>{{ title }}</p>
+<h2>Device Details View</h2>
+
 <div *ngFor="let device of devices">
-    <app-device-details [deviceDetail]="device"></app-device-details>
+<app-device-details [deviceDetail]="device"></app-device-details>
 </div>
 
-<!-- <div *ngIf=" showComponent" *ngFor="let num of appNumberArray; let i = index">
-<span>Count: {{ i + 1 }}</span>
-</div>
-</div>
-<button (click)="showHide()">Add Count</button> <br><br>
-<button>Sub Count</button> -->
+
+
+
+<!-- 
+<span>Count: {{ number }} </span>
+<br><br>
+<button (click)="addEvent()">Add Count</button> <br>
+<button (click)="subEvent()">Sub Count</button> <br>
+<app-second *ngIf="number > 5"></app-second> -->
+
 
 <!-- 
 <app-first (firstEvent)="appEvent($event)" ></app-first>
