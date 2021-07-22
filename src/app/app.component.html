@@ -1,8 +1,32 @@
-{{title}}
+<!-- <p>{{ title }}</p> -->
+<p>Device details</p>
+<!-- <app-device-details [deviceDetail]="device"></app-device-details> -->
+<div *ngFor="let device of devices">
+    <app-device-details [deviceDetail]="device"></app-device-details>
+</div>
+
+<!-- <div *ngIf=" showComponent" *ngFor="let num of appNumberArray; let i = index">
+<span>Count: {{ i + 1 }}</span>
+</div>
+</div>
+<button (click)="showHide()">Add Count</button> <br><br>
+<button>Sub Count</button> -->
+
+<!-- 
 <app-first (firstEvent)="appEvent($event)" ></app-first>
-<app-second [secondMessage]="appMessage"></app-second>
+<app-second [secondMessage]="appMessage"></app-second> -->
 
 
 <!-- <app-third (thirdEvent)="appEvent($event)"></app-third>
 <app-fourth></app-fourth>
 <router-outlet></router-outlet> -->
+
+<!-- <div *ngFor="let message of appMessageArray">
+<app-first [firstMessage]="message"></app-first>
+</div>
+
+<div *ngIf="showComponent">
+    <app-second></app-second>
+</div>
+
+<button (click)="showHide()">Show</button> -->
