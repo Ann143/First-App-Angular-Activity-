@@ -8,12 +8,12 @@ import { Device } from './models';
 })
 export class AppComponent {
 
-  @Output() appEvent= new EventEmitter();
-  
-  title = 'This is my first Angular Project!';
+  // @Output() appEvent= new EventEmitter();
+
+  // title = 'This is my first Angular Project!';
 
   //This is for activity number 5:
-  devices : Device []= [
+  deviceDetails : Device []= [
     {
       name: "Device01",
       brand: "Dell",
@@ -27,16 +27,14 @@ export class AppComponent {
       model: "VersaPro",
       year: 2019,
       serial: "23456dsf"
-    },
-    {
-      name: "Device03",
-      brand: "Acer",
-      model: "Latitude",
-      year: 2018,
-      serial: "23456dsds"
     }
   ]
 
+  addDevice(device: Device) {
+    console.log(device);
+    this.deviceDetails.push(device as Device);
+    console.log(this.deviceDetails);
+  }
 
 //This is for activity number 4:
   // number=0;

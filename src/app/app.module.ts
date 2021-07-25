@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { ThirdComponent } from './third/third.component';
 import { FourthComponent } from './fourth/fourth.component';
 import { FirstComponent } from './first/first.component';
 import { DeviceDetailsComponent } from './device-details/device-details.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { DeviceDetailsComponent } from './device-details/device-details.componen
     ThirdComponent,
     FourthComponent,
     FirstComponent,
-    DeviceDetailsComponent
+    DeviceDetailsComponent,
+    TemplateFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,5 +3,5 @@ export interface Device {
     brand: string;
     model: string;
     year: number;
-    serial: string;
+    serial: any;
 }

@@ -1,20 +1,31 @@
 
-<p>{{ title }}</p>
-<h2>Device Details View</h2>
+<!-- <p>{{ title }}</p> -->
 
-<div *ngFor="let device of devices">
-<app-device-details [deviceDetail]="device"></app-device-details>
-</div>
+<!--This is for activity 6:-->
+<div class="container">
+    <div class="row">
+        <h2 id="details">Device Details View</h2><br><br><br><br>
 
+      <div class="col" *ngFor="let device of deviceDetails">
+            <!--This is for activity number 5-->
+        <app-device-details [deviceDetail]="device"></app-device-details>
+      </div>
 
-
+      <div class="col">
+          <h4 class="text">Add a Device</h4>
+       <app-template-form (deviceDetails)="addDevice($event)"></app-template-form>
+      </div>
+    </div>
+  </div>
 
 <!-- 
 <span>Count: {{ number }} </span>
 <br><br>
 <button (click)="addEvent()">Add Count</button> <br>
 <button (click)="subEvent()">Sub Count</button> <br>
-<app-second *ngIf="number > 5"></app-second> -->
+<div  *ngIf="number > 5">
+<app-second></app-second> 
+</div>-->
 
 
 <!-- 
