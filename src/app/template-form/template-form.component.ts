@@ -1,6 +1,5 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-template-form',

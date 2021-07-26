@@ -10,11 +10,17 @@ export class AppComponent {
 
   // @Output() appEvent= new EventEmitter();
 
-  // title = 'This is my first Angular Project!';
+  title = 'This is my first Angular Project!';
 
   //This is for activity number 5:
+  // deviceDetail;
+
+  showUpdate = false;
+  selectedDevice ;
+
   deviceDetails : Device []= [
     {
+      id:0,
       name: "Device01",
       brand: "Dell",
       model: "ITZ400",
@@ -22,19 +28,51 @@ export class AppComponent {
       serial: "123456try"
     },
     {
+      id:1,
       name: "Device02",
       brand: "NEC",
       model: "VersaPro",
       year: 2019,
       serial: "23456dsf"
+    },
+    {
+      id:2,
+      name: "Device03",
+      brand: "Lenovo",
+      model: "Pro",
+      year: 2019,
+      serial: "234dfdg"
     }
   ]
 
-  addDevice(device: Device) {
-    console.log(device);
-    this.deviceDetails.push(device as Device);
-    console.log(this.deviceDetails);
+   updateDevice(event,id){
+    this.showUpdate = event;
+    this.selectedDevice = this.deviceDetails.find(device=> device.id === id);
   }
+
+  updateDisplay(event){
+
+    this.deviceDetails.forEach(device => {
+
+       if(device.id === event.value.id){
+        device.name = event.value.name;
+        device.brand = event.value.brand;
+        device.model = event.value.model;
+        device.year = event.value.year;
+        device.serial = event.value.serial;
+       }
+
+    });
+
+    this.showUpdate = false;
+  }
+
+ // addDevice(device: Device) {
+   
+  //   this.deviceDetails.push(device as Device);
+    
+  // }
+
 
 //This is for activity number 4:
   // number=0;

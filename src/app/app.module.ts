@@ -10,6 +10,7 @@ import { FourthComponent } from './fourth/fourth.component';
 import { FirstComponent } from './first/first.component';
 import { DeviceDetailsComponent } from './device-details/device-details.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { TemplateFormComponent } from './template-form/template-form.component';
     FirstComponent,
     DeviceDetailsComponent,
     TemplateFormComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,3 +34,4 @@ import { TemplateFormComponent } from './template-form/template-form.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

@@ -1,9 +1,32 @@
 .container{
-    margin-top:50px;
+    margin-top:20px;
 }
 #details{
-    margin-left:180px;
+    /* margin-left:190px; */
+    text-align: center;
 }
 #text{
     text-align: center;
+}
+.card{
+    border-style:inset;
+}
+.left{
+    float: left;
+    /* width: 60%; */
+}
+.right{
+    float: right;
+    /* width: 40%; */
+   
+}
+/* .form{
+    margin-top: 30px;
+} */
+.reactive{
+    margin-left: 525px;
+}
+.para{
+    text-align: center;
+    margin-top: 15px;
 }

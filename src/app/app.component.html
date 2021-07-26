@@ -1,22 +1,52 @@
 
-<!-- <p>{{ title }}</p> -->
+<div class="para">
+<p>{{ title }}</p>
+</div>
 
 <!--This is for activity 6:-->
-<div class="container">
+<h2 id="details">Device Details View</h2>
+
+ <div class="container" *ngIf="!showUpdate">
     <div class="row">
-        <h2 id="details">Device Details View</h2><br><br><br><br>
-
-      <div class="col" *ngFor="let device of deviceDetails">
+      <div class="col device" *ngFor="let device of deviceDetails"> 
             <!--This is for activity number 5-->
-        <app-device-details [deviceDetail]="device"></app-device-details>
+            <div class="card" style="width: 21rem;">
+              <div class="card-body">
+                <app-device-details
+                 [deviceDetail]="device"
+                (updateDetails)="updateDevice($event,device.id)"      
+                >  
+                </app-device-details>
+              </div>
+            </div>
       </div>
-
-      <div class="col">
+      <br>
+      <!-- <div class="col" >
           <h4 class="text">Add a Device</h4>
        <app-template-form (deviceDetails)="addDevice($event)"></app-template-form>
-      </div>
+      </div> -->
+</div>
+</div> 
+
+<div class="container reactive" *ngIf="showUpdate">
+  <h4>Update Device Info</h4>
+  <div class="card" style="width: 21rem;">
+    <div class="card-body">
+      <app-reactive-form 
+      [device]="selectedDevice"
+      (update)="updateDisplay($event)"
+      ></app-reactive-form>
     </div>
   </div>
+</div>
+
+<!-- <div class="right">
+  <h4 class="text">Add a Device</h4>
+  <app-template-form (deviceDetails)="addDevice($event)"></app-template-form>
+</div> -->
+
+
+
 
 <!-- 
 <span>Count: {{ number }} </span>
@@ -46,3 +76,5 @@
 </div>
 
 <button (click)="showHide()">Show</button> -->
+
+<router-outlet></router-outlet>
