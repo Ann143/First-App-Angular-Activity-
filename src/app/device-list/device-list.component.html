@@ -1,0 +1,9 @@
+<br><br>
+<div style="text-align: center;">
+<h2>Device List</h2>
+</div>
+<button class="btn btn-outline-primary" (click)="addDevice()">Add Device</button>
+
+<div *ngFor="let device of deviceDetails" style="margin-top: 20px;">
+    <app-device-details [deviceDetail]="device"></app-device-details>
+</div>

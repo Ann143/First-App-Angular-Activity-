@@ -1,7 +1,14 @@
 
-<h3>{{ deviceDetail.name }}</h3>
-<p>Brand: {{ deviceDetail.brand }}</p>
-<p>Model: {{ deviceDetail.model }}</p>
-<p>Year: {{ deviceDetail.year }}</p>
-<p>Serial: {{ deviceDetail.serial }}</p>
-<button class="btn btn-outline-success" (click)="updateDevice()">Update</button>
+
+<div class="container">
+<div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; float: left; margin-left: 40px">
+  <div class="card-body">
+    <h3>{{ deviceDetail.name }}</h3>
+    <p>Brand: {{ deviceDetail.brand }}</p>
+    <p>Model: {{ deviceDetail.model }}</p>
+    <p>Year: {{ deviceDetail.year }}</p>
+    <p>Serial: {{ deviceDetail.serial }}</p>
+    <button class="btn btn-outline-success" (click)="updateDevice()">Update</button><br>
+  </div>
+</div>
+</div>
