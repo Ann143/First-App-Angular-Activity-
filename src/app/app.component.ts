@@ -15,57 +15,58 @@ export class AppComponent {
   //This is for activity number 5:
   // deviceDetail;
 
-  showUpdate = false;
-  selectedDevice ;
+  // showUpdate = false;
+  // selectedDevice ;
 
-  deviceDetails : Device []= [
-    {
-      id:0,
-      name: "Device01",
-      brand: "Dell",
-      model: "ITZ400",
-      year:   2021,
-      serial: "123456try"
-    },
-    {
-      id:1,
-      name: "Device02",
-      brand: "NEC",
-      model: "VersaPro",
-      year: 2019,
-      serial: "23456dsf"
-    },
-    {
-      id:2,
-      name: "Device03",
-      brand: "Lenovo",
-      model: "Pro",
-      year: 2019,
-      serial: "234dfdg"
-    }
-  ]
+  // deviceDetails: Device[];
+  // deviceDetails : Device []= [
+  //   {
+  //     id:0,
+  //     name: "Device01",
+  //     brand: "Dell",
+  //     model: "ITZ400",
+  //     year:   2021,
+  //     serial: "123456try"
+  //   },
+  //   {
+  //     id:1,
+  //     name: "Device02",
+  //     brand: "NEC",
+  //     model: "VersaPro",
+  //     year: 2019,
+  //     serial: "23456dsf"
+  //   },
+  //   {
+  //     id:2,
+  //     name: "Device03",
+  //     brand: "Lenovo",
+  //     model: "Pro",
+  //     year: 2019,
+  //     serial: "234dfdg"
+  //   }
+  // ]
 
-   updateDevice(event,id){
-    this.showUpdate = event;
-    this.selectedDevice = this.deviceDetails.find(device=> device.id === id);
-  }
+  //  updateDevice(event,id){
+  //   this.showUpdate = event;
+  //   this.selectedDevice = this.deviceDetails.find(device=> device.id === id);
+  // }
 
-  updateDisplay(event){
+  // updateDisplay(event){
 
-    this.deviceDetails.forEach(device => {
+  //   this.deviceDetails.forEach(device => {
 
-       if(device.id === event.value.id){
-        device.name = event.value.name;
-        device.brand = event.value.brand;
-        device.model = event.value.model;
-        device.year = event.value.year;
-        device.serial = event.value.serial;
-       }
+  //      if(device.id === event.value.id){
+  //       device.name = event.value.name;
+  //       device.brand = event.value.brand;
+  //       device.model = event.value.model;
+  //       device.year = event.value.year;
+  //       device.serial = event.value.serial;
+  //      }
 
-    });
+  //   });
 
-    this.showUpdate = false;
-  }
+  //   this.showUpdate = false;
+  // }
 
  // addDevice(device: Device) {
    

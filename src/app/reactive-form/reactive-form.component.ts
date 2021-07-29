@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Device } from "../models";
+import { DeviceService } from '../device.service';
 
 @Component({
   selector: 'app-reactive-form',
@@ -11,7 +12,7 @@ import { Device } from "../models";
 export class ReactiveFormComponent implements OnInit {
 
 
-  @Input() device: Device = {
+    device: Device = {
     id: null,
     name:'',
     brand: '',
@@ -31,9 +32,14 @@ export class ReactiveFormComponent implements OnInit {
     serial: new FormControl('')
   })
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private deviceService: DeviceService
+    ) { }
 
   ngOnInit(): void {
+    this.device = this.deviceService.getDevice(this.deviceService.id);
+
     this.updateForm = new FormGroup({
       id: new FormControl(this.device.id),
       name: new FormControl(this.device.name),
@@ -45,10 +51,11 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   updateDevice(){
-    // this.update.emit(this.updateForm);
+    this.deviceService.updateDevice(this.updateForm.value)
     this.router.navigate(['/list']);
+    console.log(this.updateForm.value);
+    // this.update.emit(this.updateForm);
+    
   }
-
- 
 
 }

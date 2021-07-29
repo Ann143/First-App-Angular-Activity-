@@ -1,0 +1,41 @@
+
+<br><br>
+<div style="text-align: center;">
+
+</div>
+<br>
+  <div class="container" *ngIf ="!isShown">
+    <div class="row">
+      <h1>List of Users</h1>
+      <div class="col" *ngFor = "let user of users">
+        <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; float: left; margin-left: 40px">
+            <div class="card-body">        
+                        <h2> {{user.name}}</h2>
+
+                        <button class="btn btn-outline-primary" (click)="showDetail(user)">View Details</button>   
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" *ngIf = "isShown" style="margin-left: 500px;">
+    <h3>User Details</h3>
+        <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; float: left; margin-left: 40px">
+            <div class="card-body">
+                <h3>{{user.name}}</h3>
+                <p>Username: {{user.username}}</p>
+                <p>Email: {{user.email}}</p>
+                <p>Address: {{user.address.street}}, {{user.address.suite}}, {{user.address.city}}, {{user.address.zipcode}}</p>
+                <p>Phone: {{user.phone}}</p>
+                <p>Website: {{user.website}}</p>
+                <p>Company: {{user.company.name}}</p>
+                
+                <button class="btn btn-outline-primary" (click)="hideDetail()">Back to Users</button> 
+            </div>
+          </div>
+  </div>
+
+
+  
